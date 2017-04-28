@@ -1,0 +1,4 @@
+﻿  FileCallingPractice.cpp
+c:\users\tim\desktop\filecallingpractice (2)\filecallingpractice\filecallingpractice\filecallingpractice.cpp(12): warning C4474: 'fscanf' : too many arguments passed for format string
+  c:\users\tim\desktop\filecallingpractice (2)\filecallingpractice\filecallingpractice\filecallingpractice.cpp(12): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\tim\desktop\filecallingpractice (2)\filecallingpractice\filecallingpractice\filecallingpractice.cpp(12): error C4700: uninitialized local variable 'inputfilepointer' used
