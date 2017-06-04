@@ -32,12 +32,7 @@ with warnings.catch_warnings():
 company = 'GOOG'
 current_t=dt.date.today()
 
-##startY=2000
-##startM=1
-##startD=1
-##endY=current_time.year
-##endM=current_time.month
-##endD=current_time.day
+
 ##current_time_array=[endY,endM,endD]
 ##time_in_year=timedelta(weeks=40, days=85)
 def makeDatePretty(dateArray):
