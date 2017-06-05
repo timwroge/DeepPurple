@@ -4,8 +4,8 @@ node1 = tf.constant(3.0,tf.float32)
 node2 = tf.constant(4.0) # uses the tf.float32 implicitly! 
 print(node1,node2)
 
-Tensor("Const:0", shape=(), dtype=float32)
-Tensor("Const_1:0", shape=(),dtype=float32)
+tensor("Const:0", shape=(), dtype=float32)
+tensor("Const_1:0", shape=(),dtype=float32)
 sess = tf.Session()
 print(sess.run([node1,node2]))
 
