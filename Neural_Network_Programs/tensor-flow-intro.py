@@ -50,13 +50,9 @@ print("The model produces :",sess.run(linear_model,{x:[1,2,3,4]}), "when x:[1,2,
 # an error function is the same as a loss function 
 # y is a placeholder for desired values 
 
-##y = tf.placeholder(tf.float32)
-##squared_deltas = tf.square(linear_model - y)
-##loss = tf.reduce_sum(squared_deltas)
-##print(sess.run(loss,{x:[1,2,3,4],y:[0,-1,-2,-3]}))
-
 y = tf.placeholder(tf.float32)
 squared_deltas = tf.square(linear_model - y)
+#this is the loss function
 loss = tf.reduce_sum(squared_deltas)
 print("Loss" , sess.run(loss, {x:[1,2,3,4], y:[0,-1,-2,-3]}))
 
@@ -72,6 +68,7 @@ optimizer = tf.train.GradientDescentOptimizer(0.01)
 train = optimizer.minimize(loss)
 
 sess.run(init) # resetting to initial values (I didn't change them though)
+#trainging model over 1000 epochs (cycles of data set)
 for i in range(1000):
     sess.run(train,{x:[1,2,3,4],y:[0,-1,-2,-3]})
 print(sess.run([W,b]))
