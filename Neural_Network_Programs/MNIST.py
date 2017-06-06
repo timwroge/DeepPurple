@@ -14,6 +14,7 @@ FLAGS = None
 
 #this is a dataset of numbers between zero and nine that is squashed down into a vector of
 #size 1x784
+
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 #this should create a symbolic vector input for the data set
@@ -21,9 +22,17 @@ x = tf.placeholder(tf.float32, [None, 784])
 #None means the dimension can be any length
 
 #this will create the weights and biases for the model
+
+#name_scope will provide visualizing capabilities for the data
+
+
 #W and b are tensors full of zeros
 W = tf.Variable(tf.zeros([784, 10]))
 b = tf.Variable(tf.zeros([10]))
+
+#add summary operations for TENSORBOARD
+w_h=tf.histogram_summary("weights", W)
+b_h=tf.histogram_summary("weights", b)
 
 #implementing the model with one line!
 y = tf.nn.softmax(tf.matmul(x, W) + b) #matmul means matrix multiply
